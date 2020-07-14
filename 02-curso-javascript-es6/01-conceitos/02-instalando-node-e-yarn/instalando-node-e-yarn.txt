@@ -1,0 +1,9 @@
+acesse o site do node, baixe e instale. 
+Após ter instalado, abra o seu terminal e rode o comando
+node -v 
+Se aparecer a versão do node é porque foi instalado com sucesso
+
+acesse o site do yarn, baixe e instale
+Após ter instalado, abra o seu terminal e rode o comando
+node -v
+Se aparecer a versão do yarn é porque foi instalado com sucesso

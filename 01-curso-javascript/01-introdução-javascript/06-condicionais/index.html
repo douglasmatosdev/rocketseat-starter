@@ -1,0 +1,62 @@
+<html>
+
+<head>
+  <title>Curso JavaScript - condicionais</title>
+</head>
+
+<body>
+  <script>
+
+    function retornaSexo1(sexo) {
+      // M, F
+      // Masculino, Feminino
+
+      if (sexo === 'M') {
+        return 'Masculino';
+      } else {
+        return 'Feminino';
+      }
+
+    }
+
+    function retornaSexo2(sexo) {
+      // M, F
+      // Masculino, Feminino
+
+      if (sexo === 'M') {
+        return 'Masculino';
+      } else if (sexo === 'F') {
+        return 'Feminino';
+      } else {
+        return 'Outro'
+      }
+
+    }
+
+    var resultado1 = retornaSexo1('M');
+    console.log(resultado1);
+
+    var resultado2 = retornaSexo2('blabla');
+    console.log(resultado2);
+
+
+    // Quando temos muitos if para verificar somente igualdade
+    // é comum usarmos o switch
+
+    function retornaSexo3(sexo) {
+      switch (sexo) {
+        case 'M':
+          return 'Masculino';
+        case 'F':
+          return 'Feminino';
+        default:
+          return 'Outro';
+      }
+    }
+
+    var resultado3 = retornaSexo3('M');
+    console.log(resultado3)
+  </script>
+</body>
+
+</html>

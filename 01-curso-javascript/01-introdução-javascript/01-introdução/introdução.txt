@@ -1,0 +1,11 @@
+Introdução ao JavaScript
+
+- O que é?
+
+  JavaScript é uma linguagem de programação que nos permite executar scripts que serão
+  interpretados pelo cliente.
+
+  # cliente: cliente é qualquer aplicação que consome as informções. (navegador, celular, apps, etc...)
+
+- Onde é aplicado?
+  Hoje o JavaScript pode ser usado no lado do cliente e também do lado do servidor.

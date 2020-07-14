@@ -1,0 +1,37 @@
+<html>
+
+<head>
+  <title>Resolvendo desafio</title>
+</head>
+
+<body>
+
+  <!-- https://github.com/axios/axios -->
+  <script>
+
+    function checaIdade(idade) {
+      return new Promise(function (resolve, reject) {
+
+        if (idade > 18) {
+          resolve();
+        } else {
+          reject();
+        }
+      });
+    }
+
+    checaIdade(20)
+      .then(function () {
+        console.log("Maior de que 18.")
+      })
+      .catch(function () {
+        console.log("Menor que 18.");
+
+      })
+
+
+
+  </script>
+</body>
+
+</html>

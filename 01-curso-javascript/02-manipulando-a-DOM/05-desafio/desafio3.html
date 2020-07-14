@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  <title>Resolvendo desafio</title>
+</head>
+
+<body>
+  <div id="app">
+  </div>
+  <input type="text" name="nome">
+  <button onclick="adicionar()">Adicionar</button>
+
+  <script>
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+    var boxElement = document.querySelector('#app');
+    var inputElement = document.querySelector('input[name=nome]');
+
+    function criaLista() {
+      boxElement.innerHTML = '';
+
+      for (nome of nomes) {
+        var liElement = document.createElement('li');
+        var textElement = document.createTextNode(nome)
+        liElement.appendChild(textElement)
+        boxElement.appendChild(liElement)
+      }
+    }
+
+    function adicionar() {
+      var textElement = inputElement.value;
+
+      nomes.push(textElement);
+      inputElement.value = '';
+      criaLista()
+    }
+
+  </script>
+</body>
+
+</html>

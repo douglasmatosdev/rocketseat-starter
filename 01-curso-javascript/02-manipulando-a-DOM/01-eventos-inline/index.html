@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  <title>Curso JavaScript - eventos inline</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <button onclick="mostraAlerta()">Clique</button>
+    <button onmousemove="mostraAlerta()">Mouse por cima</button>
+    <input onkeypress="mostraAlerta()" placeholder="Exibe alerta ao digitar" type="text">
+  </div>
+
+  <script>
+    
+    function mostraAlerta() {
+      alert('Botão foi clicado');
+    }
+      
+  </script>
+</body>
+
+</html>

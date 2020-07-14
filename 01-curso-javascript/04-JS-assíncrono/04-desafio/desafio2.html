@@ -1,0 +1,62 @@
+<html>
+
+<head>
+  <title>Resolvendo desafio</title>
+</head>
+
+<body>
+
+  <div id="app"></div>
+  <input type="text" name="nome">
+  <button id="btn">Adicionar</button>
+
+
+  <!-- https://github.com/axios/axios -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    var boxElement = document.querySelector('#app');
+    var inputElement = document.querySelector('input[name=nome]');
+    var btnElement = document.querySelector('#btn');
+    var ulElement = document.createElement('ul')
+
+    function criarListaRepos(reposName) {
+      
+      var liElement = document.createElement('li')
+      var textElement = document.createTextNode(reposName);
+      liElement.appendChild(textElement);
+      ulElement.appendChild(liElement);
+
+      boxElement.appendChild(ulElement);
+    }
+
+    function preload() {
+      var msgLoading = document.createElement('li');
+      msgLoading.setAttribute('id', 'preload');
+      var txtMsg = document.createTextNode('Carregando...');
+      msgLoading.appendChild(txtMsg);
+      boxElement.appendChild(msgLoading);
+
+    }
+
+    btnElement.onclick = mostraRepositorio;
+
+    function mostraRepositorio(user) {
+      preload()
+      var user = inputElement.value;
+      axios('https://api.github.com/users/' + user + '/repos')
+      .then(function (response) {
+        var repositorios = response.data;
+        for (repositorio of repositorios) {
+          criarListaRepos(repositorio.name)
+        }
+      })
+      .catch(function (err) {
+        console.warn("O usuário não existe");
+      })
+      
+    }
+
+  </script>
+</body>
+
+</html>

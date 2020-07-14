@@ -1,0 +1,7 @@
+ES6 - EcmaScript
+
+- babel
+pega o código e transpila para navegadores
+
+- webpack
+servidor que faz livereload

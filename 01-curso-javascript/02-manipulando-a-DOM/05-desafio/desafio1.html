@@ -1,0 +1,64 @@
+<html>
+<head>
+  <title>Resolvendo desafio</title>
+  <style>
+    body { position: relative; }
+    #app {
+      margin: 0 auto;
+
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap:wrap;
+
+      width: 100%;
+      height: calc(100vh - 200px);
+      overflow-y: scroll;
+
+      border: 1px solid #000;
+    }
+    .btn {
+      position: absolute;
+      margin-top: 2em;
+      left: calc(50vw - 100px);
+
+      padding: 1em;
+      border: none;
+      color: #fff;
+      background: #f00;
+      text-transform: uppercase;
+      border-radius: 10px;
+      font-size: 1.2em;
+
+    }
+    .square {
+      margin: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>  
+  <button class="btn">Criar quadrado</button>
+ 
+
+
+  <script>
+
+  var appElement = document.querySelector('#app');
+  var btnElement = document.querySelector('.btn');
+
+
+  btnElement.onclick = function() {
+
+    var squareElement = document.createElement('div');
+    squareElement.setAttribute('class', 'square')
+    squareElement.style.width = 100;
+    squareElement.style.height = 100;
+    squareElement.style.backgroundColor = 'f00';
+
+    appElement.appendChild(squareElement);
+  }
+
+
+  </script>
+</body>
+</html>
