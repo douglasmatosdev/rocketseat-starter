@@ -1,0 +1,61 @@
+<html>
+
+<head>
+  <title>Curso JavaScript - trabalhando com a DOM</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <input type="text" name="nome" id="nome" class="nome">
+    <input type="text" name="nome2" id="nome2" class="nome2">
+    <button class="botao">Adicionar</button>
+  </div>
+
+  <script>
+
+    // 1° MÉTODO
+    var inputElement = document.getElementById('nome');
+    console.log(inputElement);
+    
+
+    // 2° MÉTODO
+    var inputElement = document.getElementsByTagName('input');
+    console.log(inputElement);
+    
+    var inputElement = document.getElementsByTagName('input')[0];
+    console.log(inputElement);
+    
+    
+    // 3° MÉTODO
+    var inputElement = document.getElementsByClassName('nome');
+    console.log(inputElement);
+    
+    var inputElement = document.getElementsByClassName('nome')[0];
+    console.log(inputElement);
+      
+    
+    // 4° MELHOR MÉTODO
+    var inputElement  =document.querySelector('div#app input');
+    console.log(inputElement);
+
+    var inputElement  =document.querySelector('input[name=nome');
+    console.log(inputElement);
+    
+    var inputElement  =document.querySelectorAll('input');
+    console.log(inputElement);
+
+    var inputElement = document.querySelector('input[name=nome');
+    var inputElement2 = document.querySelector('input[name=nome2');
+    var btnElement = document.querySelector('button.botao');
+
+    btnElement.onclick = function() {
+      var text = inputElement.value;
+      var text2 = inputElement2.value;
+      alert(text + ' ' + text2);
+    }
+
+  </script>
+</body>
+
+</html>

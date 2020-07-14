@@ -1,0 +1,41 @@
+<html>
+
+<head>
+  <title>Curso JavaScript - lidando com elementos</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <input type="text" id="nome">
+
+    <button id="criaElemento">CRIA ELEMENTO</button>
+    <button id="removeElemento">REMOVE ELEMENTO</button>
+  </div>
+
+  <script>
+    var linkElement = document.createElement('a');
+    linkElement.setAttribute('href', 'https://github.com/douglasmatosdev');
+    linkElement.setAttribute('tilte', 'github Douglas Matos');
+    linkElement.setAttribute('target', '_blank');
+
+    var btnCriarElemento = document.querySelector("#criaElemento");
+    btnCriarElemento.onclick = function () {
+      var textElement = document.createTextNode('Meu github');
+      linkElement.appendChild(textElement);
+    }
+
+    var btnRemoveElemento = document.querySelector('#removeElemento');
+    btnRemoveElemento.onclick = function () {
+      var inputElement = document.querySelector('#nome');
+      containerElement.removeChild(inputElement);
+    }
+    var containerElement = document.querySelector('#app');
+    containerElement.appendChild(linkElement);
+
+
+
+  </script>
+</body>
+
+</html>

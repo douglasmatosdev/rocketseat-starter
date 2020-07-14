@@ -1,0 +1,54 @@
+O EcmaScript 6 é uma nova forma de escever javasript, e como já sabemos,
+essa linguagem evolui muito rápido e os navegadores não evoluem tão rápido assim,
+aí entra o Babel.
+
+O Babel é responsável por pegar todo o código escrito com as novas específicações,
+e transpilar em um código javascript que os navegadores entendam.
+
+Em nosso projeto, podemos rodar o comando 
+
+~$ yarn init -y
+
+Este comando irá crair um arquivo chamado package.json, neste arquivo ficam algumas
+configurações e informações do nosso projeto.
+
+Prcisamos instalar e configurar o Babel, para isso rode os seguintes comandos.
+
+~$ yarn add @babel/cli
+
+~$ yarn add @babel/preset-env
+
+~$ yarn add @babel/core
+
+Veja que após a instalação,  surgiu uma pasta com o nome node_modules, nesta pasta 
+ficam todas as dependências das dependências do nosso projeto.
+Caso você vá subir este projeto para o github crie um arquivo na raiz do seu projeto
+com o nome .gitignore e dentro dele escreva node_modules/ dessa forma do subir o seu 
+projeto ele não irá subir a pasta node_modules.
+
+
+- Configurando o Babel
+
+crie um arquivo chamado .babelrc e dentro deste arquivo digite
+
+{
+  "presets": ["@babel/preset-env"]
+}
+
+Esta configuração do Babel usando o preset-env serve para identificar  o ambiente para o qual
+ele vai gerar os códigos javascript, ou seja, se para o browser, para node, etc...
+
+- Agora crie um arquivo index.html e um arquivo main.js, após isso abra o package.json e adicione
+
+"scripts": {
+  "dev": "babel ./main.js -o ./bundle.js -w"
+}
+
+O script acima irá chamar o babel que pegará o código do arquivo main.js com os códigos em ES6 e
+criará um novo arquivo com o nome bundle.js com os códigos já transpilados. O último parâmetro -w
+significa watch, ou seja, ele vai ficar monitorando todas as alterações no código do arquivo main.js.
+
+Em seu arquivo index.html, crie um estrutura báisica HTML e no final da TAG <body> adicione a TAG
+<script src="bundle.js"></script> importando o arquivo gerado pelo Babel o arquivo bundle.js.
+
+

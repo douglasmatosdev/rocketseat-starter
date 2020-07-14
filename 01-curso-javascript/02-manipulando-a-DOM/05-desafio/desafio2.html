@@ -1,0 +1,91 @@
+<html>
+
+<head>
+  <title>Resolvendo desafio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      position: relative;
+    }
+
+    #app {
+      margin: 2em auto 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      width: 90%;
+      height: calc(100vh - 200px);
+      overflow-y: scroll;
+
+      border: 1px solid #000;
+
+      background-color: #ccc;
+    }
+
+    .btn {
+      position: absolute;
+      margin-top: 2em;
+      left: calc(50vw - 100px);
+
+      padding: 1em;
+      border: none;
+      color: #fff;
+      background: #f00;
+      text-transform: uppercase;
+      border-radius: 10px;
+      font-size: 1.2em;
+
+    }
+
+    .square {
+      margin: .5em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <button class="btn">Criar quadrado</button>
+
+
+
+  <script>
+
+    var appElement = document.querySelector('#app');
+    var btnElement = document.querySelector('.btn');
+
+
+    btnElement.onclick = function () {
+
+      var squareElement = document.createElement('div');
+      squareElement.setAttribute('class', 'square')
+      squareElement.style.width = 100;
+      squareElement.style.height = 100;
+      squareElement.style.backgroundColor = 'f00';
+      appElement.appendChild(squareElement);
+
+      squareElement.onmouseover = function() {
+        squareElement.style.backgroundColor = getRandomColor();
+      }
+    }
+    
+    function getRandomColor() {
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      
+      for(var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+    
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<html>
+
+<head>
+  <title>Resolvendo os desafios</title>
+</head>
+
+<body>
+
+  <script>
+    // 1° EXERCICIO
+    console.log("===================================================================================");
+    console.log("1° EXERCICIO");
+
+
+    function mostraEndereco(endereco) {
+      return 'O usuário mora em ' + endereco.cidade + ' / ' + endereco.uf + ', no bairro ' + endereco.bairro + ', na rua ' + endereco.rua + ' com n° ' + endereco.numero + '.';
+    }
+    var endereco = {
+      rua: "Rua Jorge Vieira",
+      numero: 20,
+      bairro: "Parque Paulista",
+      cidade: "Duque de Caxias",
+      uf: "RJ"
+    }
+    var resultadoEndereco = mostraEndereco(endereco);
+    console.log(resultadoEndereco);
+
+
+    // 2° EXERCICIO
+    console.log("===================================================================================");
+    console.log("2° EXERCICIO");
+
+
+    function pares(x, y) {
+      while (x < y) {
+        if (x % 2 === 0) {
+          console.log(x);
+        }
+        x++;
+      }
+    }
+    pares(32, 321);
+
+
+
+    // 3° EXERCICIO
+    console.log("===================================================================================");
+    console.log("3° EXERCICIO");
+
+    function temHabilidade(skills) {
+
+      for (skill of skills) {
+
+        var indice = skills.indexOf(skill);
+        if (skills[indice] === 'Javascript') {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    }
+    var skills = ["Javascript", "ReactJS", "React Native"];
+
+    var resultado = temHabilidade(skills); // true ou false
+    console.log(resultado);
+
+
+    // 4° EXERCICIO
+    console.log("===================================================================================");
+    console.log("4° EXERCICIO");
+
+
+    function experiencia(anos) {
+      if (anos >= 0 && anos < 1) {
+        return 'Iniciante';
+      } else if (anos >= 1 && anos < 3) {
+        return 'Intermediário';
+      } else if (anos >= 3 && anos <= 6) {
+        return 'Avançado';
+      } else if (anos >= 7) {
+        return 'Jedi Master';
+      }
+    }
+
+    var nivelDeExperiencia = experiencia(7);
+    console.log(nivelDeExperiencia);
+
+    // De 0-1 ano: Iniciante
+    // De 1-3 anos: Intermediário
+    // De 3-6 anos: Avançado
+    // De 7 acima: Jedi Master
+
+
+    // 5° EXERCICIO
+    console.log("===================================================================================");
+    console.log("5° EXERCICIO");
+
+    var usuarios = [
+      {
+        nome: "Diego",
+        habilidades: ["Javascript", "ReactJS", "Redux"]
+      },
+      {
+        nome: "Gabriel",
+        habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+      }
+    ];
+
+    function mostraHabilidades(usuarios) {
+      for (usuario of usuarios) {
+        console.log("O " + usuario.nome + " possui as habilidades: " + usuario.habilidades.join(', '));
+      }
+    }
+
+
+
+    mostraHabilidades(usuarios);
+
+
+
+  </script>
+</body>
+
+</html>

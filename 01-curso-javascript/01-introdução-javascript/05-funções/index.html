@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title>Curso JavaScript - funções</title>
+</head>
+<body>
+  <script>
+    
+   function soma(numero1, numero2) {
+     var resultado = numero1 + numero2;
+
+     return resultado;
+   }
+   function subtracao(numero1, numero2) {
+     var resultado = numero1 - numero2;
+
+     return resultado;
+   }
+   function mutiplicacao(numero1, numero2) {
+     var resultado = numero1 * numero2;
+
+     return resultado;
+   }
+   function divisao(numero1, numero2) {
+     var resultado = numero1 / numero2;
+
+     return resultado;
+   }
+ 
+   function modulo(numero1, numero2) {
+     var resultado = numero1 % numero2;
+
+     return resultado;
+   }
+
+   // Note que aqui eu criei outra variável com o nome resultado
+   // Isso é possível, porque a primeira variável que foi definida 
+   // com este nome, foi dentro da função soma, por isso é como se ela
+   // só existisse dentro da função, o que nos permite criar outra variável
+   // com o mesmo nome fora da função
+   var resultadoSoma = soma(1, 2);
+   var resultadoSubtracao = subtracao(1, 2);
+   var resultadoMutiplicacao = mutiplicacao(1, 2);
+   var resultadoDivisao = divisao(1, 2);
+   var resultadoModulo = modulo(1, 2);
+
+   console.log(resultadoSoma);
+   console.log(resultadoSubtracao);
+   console.log(resultadoMutiplicacao);
+   console.log(resultadoDivisao);
+   console.log(resultadoModulo);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+
+<head>
+  <title>Curso JavaScript - operadores lógicos</title>
+</head>
+
+<body>
+  <script>
+    // AND, OR, NOT
+
+    var sexo = 'M', idade = 26;
+
+    // AND &&
+    if (sexo === 'M' && idade >= 18) {
+      console.log('OK');
+    }
+
+    // OR ||
+    if (sexo === 'F' || idade >= 18)  {
+      console.log('OK')
+    }
+
+    // NOT != !==
+    if(sexo !== "F") {
+      console.log('OK');
+    }
+
+    // Armazenando o resultado da condição em uma variável
+
+    var masculino; // apenas iniciando a variável sem valor
+
+    if (sexo === 'M') {
+      masculino = true;
+    } else {
+      masculino = false;
+    }
+
+    console.log(masculino);
+
+
+    // Podemos reduzir mais
+
+    var feminino = sexo === 'F'; // já retorna true ou false
+    console.log(feminino);
+    
+
+  </script>
+</body>
+
+</html>
